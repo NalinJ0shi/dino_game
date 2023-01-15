@@ -1,0 +1,24 @@
+body{
+    font-family: 'Courier New', Courier, monospace; 
+    text-align: center; 
+    background-repeat: no-repeat;
+    background-image: url("trex.jpg");
+    background-size: cover;
+}
+.keys{
+    font-size: 3.25rem;
+    color: aqua;
+  }
+.text{
+    font-size: 1.25rem;
+  }
+
+#board{
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
