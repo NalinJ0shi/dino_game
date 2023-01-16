@@ -25,9 +25,8 @@ let dino = {
 //cactus
 let cactusArray = [];
 
-let cactus1Width = 34;
-let cactus2Width = 69;
-let cactus3Width = 102;
+let cactus1Width = 30;
+let cactus2Width = 60;
 
 let cactusHeight = 70;
 let cactusX = 700;
@@ -62,10 +61,7 @@ window.onload = function() {
 
     cactus2Img = new Image();
     cactus2Img.src = "cactus2.png";
-
-    cactus3Img = new Image();
-    cactus3Img.src = "cactus3.png";
-
+    
     requestAnimationFrame(update);
     setInterval(placeCactus, 1000); //1000 milliseconds = 1 second
     document.addEventListener("keydown", moveDino);
@@ -143,17 +139,12 @@ function placeCactus() {
 
     let placeCactusChance = Math.random(); 
 
-    if (placeCactusChance > .90) { //10% you get cactus3
-        cactus.img = cactus3Img;
-        cactus.width = cactus3Width;
-        cactusArray.push(cactus);
-    }
-    else if (placeCactusChance > .60) { //40% you get cactus2
+    else if (placeCactusChance > .40) { //40% you get cactus2
         cactus.img = cactus2Img;
         cactus.width = cactus2Width;
         cactusArray.push(cactus);
     }
-    else if (placeCactusChance > .40) { //60% you get cactus1
+    else if (placeCactusChance > .20) { //60% you get cactus1
         cactus.img = cactus1Img;
         cactus.width = cactus1Width;
         cactusArray.push(cactus);
